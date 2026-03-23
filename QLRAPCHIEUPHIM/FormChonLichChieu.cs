@@ -20,9 +20,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void LoadPhim()
 		{
-			SqlConnection conn = new DataConnection().getConnect();
-
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				SqlDataAdapter da = new SqlDataAdapter("SELECT MaPhim, TenPhim FROM Phim", conn);
@@ -40,7 +38,7 @@ namespace QLRAPCHIEUPHIM
 		// Sửa hàm này: Load MaLichChieu và ThoiGianBatDau của phim đã chọn
 		private void LoadGioBatDau(string maPhim)
 		{
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 
@@ -72,7 +70,7 @@ namespace QLRAPCHIEUPHIM
 			string maLichChieu = cbGioBatDau.SelectedValue?.ToString();
 			if (string.IsNullOrEmpty(maLichChieu)) return;
 
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				string query = @"

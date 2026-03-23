@@ -146,7 +146,7 @@ namespace QLRAPCHIEUPHIM
 
 					try
 					{
-						using (conn)
+						using (SqlConnection conn = new DataConnection().getConnect())
 						{
 							conn.Open();
 							using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -409,11 +409,12 @@ namespace QLRAPCHIEUPHIM
 		private string LayMaKhachHangTheoTen(string tenKH)
 		{
 			string maKH = null;
-			string query = "SELECT MaKhachHang FROM KhachHang WHERE TenKhachHang = @TenKH AND (DaXoa IS NULL OR DaXoa = 0)";
+			string query = "SELECT MaKhachHang FROM KhachHang WHERE TenKhachHang = @TenKH";
 
 			try
+
 			{
-				using (conn)
+				using (SqlConnection conn = new DataConnection().getConnect())
 				{
 					conn.Open();
 					using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -628,7 +629,7 @@ namespace QLRAPCHIEUPHIM
 			{
 				string maHoaDon = TaoMaHoaDonTuDong();
 
-				using (conn)
+				using (SqlConnection conn = new DataConnection().getConnect())
 				{
 					conn.Open();
 					SqlTransaction transaction = conn.BeginTransaction();
@@ -720,7 +721,7 @@ namespace QLRAPCHIEUPHIM
 
 		private string LayTenPhimTuMaLichChieu(string maLichChieu)
 		{
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				SqlCommand cmd = new SqlCommand("SELECT TenPhim FROM LichChieu WHERE MaLichChieu = @ma", conn);
@@ -731,7 +732,7 @@ namespace QLRAPCHIEUPHIM
 
 		private string LayPhongTuMaLichChieu(string maLichChieu)
 		{
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				SqlCommand cmd = new SqlCommand("SELECT Phong FROM LichChieu WHERE MaLichChieu = @ma", conn);
@@ -742,7 +743,7 @@ namespace QLRAPCHIEUPHIM
 
 		private string LayNgayChieuTuMaLichChieu(string maLichChieu)
 		{
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				SqlCommand cmd = new SqlCommand("SELECT CONVERT(varchar, NgayChieu, 103) FROM LichChieu WHERE MaLichChieu = @ma", conn);
@@ -753,7 +754,7 @@ namespace QLRAPCHIEUPHIM
 
 		private string LayGioChieuTuMaLichChieu(string maLichChieu)
 		{
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				SqlCommand cmd = new SqlCommand("SELECT FORMAT(GioChieu, 'HH:mm') FROM LichChieu WHERE MaLichChieu = @ma", conn);
@@ -770,7 +771,7 @@ namespace QLRAPCHIEUPHIM
 		private string TaoMaHoaDonTuDong()
 		{
 			int maxSo = 0;
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				string query = "SELECT MAX(CAST(SUBSTRING(MaHoaDon, 3, LEN(MaHoaDon)) AS int)) FROM HoaDon";
@@ -813,7 +814,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void LoadTrangThaiGheDaDat()
 		{
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				string query = "SELECT SoGhe FROM Ve WHERE MaLichChieu = @MaLichChieu";
@@ -840,7 +841,7 @@ namespace QLRAPCHIEUPHIM
 			if (string.IsNullOrEmpty(maKhachHang))
 				return diem;
 
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				string query = "SELECT DiemTichLuy FROM KhachHang WHERE MaKhachHang = @MaKH";
@@ -860,7 +861,7 @@ namespace QLRAPCHIEUPHIM
 			if (string.IsNullOrEmpty(maKhachHang))
 				return;
 
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 

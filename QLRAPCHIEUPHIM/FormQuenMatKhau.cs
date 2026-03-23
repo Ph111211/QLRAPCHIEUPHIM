@@ -25,7 +25,7 @@ namespace QLRAPCHIEUPHIM
 				return;
 			}
 
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				string sql = "SELECT MatKhau FROM NhanVien WHERE MaNhanVien = @MaNV AND SoDienThoai = @SDT AND TenDangNhap = @TenDN";
 				SqlCommand cmd = new SqlCommand(sql, conn);

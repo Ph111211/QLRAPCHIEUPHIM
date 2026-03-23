@@ -36,8 +36,7 @@ namespace QLRAPCHIEUPHIM
 			string tenDangNhap = txtTenDangNhap.Text.Trim();
 			string matKhau = txtMatKhau.Text.Trim();
 
-			SqlConnection conn = new DataConnection().getConnect();
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				string sql = "SELECT * FROM NhanVien WHERE TenDangNhap = @TenDangNhap AND MatKhau = @MatKhau";
 				SqlCommand cmd = new SqlCommand(sql, conn);
