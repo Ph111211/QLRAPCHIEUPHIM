@@ -7,16 +7,18 @@ using System.Threading.Tasks;
 
 namespace QLRAPCHIEUPHIM
 {
-    internal class DataConnection
-    {
-        string conStr;
-        public DataConnection()
-        {
-            conStr = @"Data Source=DESKTOP-CR6QBIA;Initial Catalog=BaiTapLon;Integrated Security=True";
-        }
-        public SqlConnection getConnect()
-        {
-            return new SqlConnection(conStr);
-        }
-    }
+	internal class DataConnection
+	{
+		private string conStr;
+
+		public DataConnection()
+		{
+			conStr = @"Data Source=LAPTOPK1;Initial Catalog=BaiTapLon;Integrated Security=True";
+		}
+
+		public SqlConnection getConnect()
+		{
+			return new SqlConnection(conStr);
+		}
+	}
 }
