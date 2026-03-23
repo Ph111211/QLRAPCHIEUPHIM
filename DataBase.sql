@@ -1,4 +1,5 @@
 ﻿create database BaiTapLon
+use BaiTapLon;
 CREATE TABLE NhanVien (
 MaNhanVien NCHAR(5) NOT NULL PRIMARY KEY, 
 TenNhanVien NVARCHAR(255) NOT NULL, 
@@ -14,7 +15,8 @@ CREATE TABLE KhachHang (
     TenKhachHang NVARCHAR(255) NOT NULL, -- Tên khách hàng
     SoDienThoai NVARCHAR(15) UNIQUE, -- Số điện thoại (duy nhất)
     Email NVARCHAR(255) UNIQUE, -- Email (duy nhất)
-    NgaySinh DATE -- Ngày sinh
+    NgaySinh DATE, -- Ngày sinh,
+	DiemTichLuy INT -- Điểm tích lũy
 );
 CREATE TABLE Phim (
     MaPhim  NCHAR(5) NOT NULL PRIMARY KEY, -- Mã phim
@@ -44,7 +46,7 @@ CREATE TABLE LichChieu (
 	FOREIGN KEY (MaPhong) REFERENCES PhongChieu(MaPhong)
 );
 CREATE TABLE Ve (
-    MaVe NCHAR(5) NOT NULL PRIMARY KEY, -- Mã vé
+    MaVe NCHAR(20) NOT NULL PRIMARY KEY, -- Mã vé
     MaLichChieu NCHAR(5) NOT NULL, -- Mã lịch chiếu (FK)
     SoGhe NVARCHAR(10) NOT NULL, -- Số ghế
     MaKhachHang NCHAR(5) NOT NULL, -- Mã khách hàng (FK, có thể NULL)
@@ -55,7 +57,7 @@ CREATE TABLE Ve (
 );
 CREATE TABLE HoaDon (
     MaHoaDon NCHAR(5) NOT NULL PRIMARY KEY,
-    MaVe NCHAR(5) NOT NULL, -- Mã vé liên kết với vé khách hàng mua
+    MaVe NCHAR(20) NOT NULL, -- Mã vé liên kết với vé khách hàng mua
 	MaKhachHang NCHAR(5) NOT NULL,
 	MaNhanVien NCHAR(5) NOT NULL,
     NgayGiaoDich DATETIME, -- Ngày và giờ giao dịch
