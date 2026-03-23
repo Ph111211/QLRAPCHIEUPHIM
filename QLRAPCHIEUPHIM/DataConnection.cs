@@ -13,7 +13,7 @@ namespace QLRAPCHIEUPHIM
 
 		public DataConnection()
 		{
-			conStr = @"Data Source=LAPTOPK1;Initial Catalog=BaiTapLon;Integrated Security=True";
+			conStr = @"Data Source=localhost;Initial Catalog=BaiTapLon;Integrated Security=True";
 		}
 
 		public SqlConnection getConnect()
