@@ -13,7 +13,6 @@ namespace QLRAPCHIEUPHIM
 {
 	public partial class UCNhanVien : UserControl
 	{
-
 		public UCNhanVien()
 		{
 			InitializeComponent();

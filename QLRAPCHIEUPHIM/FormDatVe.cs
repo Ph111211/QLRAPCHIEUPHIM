@@ -771,7 +771,8 @@ namespace QLRAPCHIEUPHIM
 		private string TaoMaHoaDonTuDong()
 		{
 			int maxSo = 0;
-			using (SqlConnection conn = new DataConnection().getConnect())
+			using (
+			SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 				string query = "SELECT MAX(CAST(SUBSTRING(MaHoaDon, 3, LEN(MaHoaDon)) AS int)) FROM HoaDon";
@@ -822,6 +823,7 @@ namespace QLRAPCHIEUPHIM
 				cmd.Parameters.AddWithValue("@MaLichChieu", this.maLichChieu);
 
 				SqlDataReader reader = cmd.ExecuteReader();
+
 				while (reader.Read())
 				{
 					string soGhe = reader["SoGhe"].ToString();

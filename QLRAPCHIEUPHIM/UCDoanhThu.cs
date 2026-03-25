@@ -16,8 +16,6 @@ namespace QLRAPCHIEUPHIM
 {
 	public partial class UCDoanhThu : UserControl
 	{
-		private string chuoiketnoi = @"Data Source=LAPTOPK1;Initial Catalog=BaiTapLon;Integrated Security=True";
-
 		public UCDoanhThu()
 		{
 			InitializeComponent();

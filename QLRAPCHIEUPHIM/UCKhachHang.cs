@@ -13,7 +13,6 @@ namespace QLRAPCHIEUPHIM
 {
 	public partial class UCKhachHang : UserControl
 	{
-		
 		public UCKhachHang()
 		{
 			InitializeComponent();
