@@ -277,13 +277,14 @@
             // 
             // dgvLichChieu
             // 
+            this.dgvLichChieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLichChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLichChieu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLichChieu,
             this.MaPhim,
             this.MaPhong,
             this.ThoiGianBatDau});
-            this.dgvLichChieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLichChieu.Location = new System.Drawing.Point(3, 129);
             this.dgvLichChieu.Name = "dgvLichChieu";
             this.dgvLichChieu.RowHeadersWidth = 51;

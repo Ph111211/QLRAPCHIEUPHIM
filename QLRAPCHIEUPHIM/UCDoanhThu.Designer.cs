@@ -178,6 +178,8 @@
             // 
             // dgvDoanhThu
             // 
+            this.dgvDoanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDoanhThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDoanhThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -186,7 +188,6 @@
             this.TenPhim,
             this.NgayGiaoDich,
             this.SoTienThanhToan});
-            this.dgvDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDoanhThu.Location = new System.Drawing.Point(181, 198);
             this.dgvDoanhThu.Name = "dgvDoanhThu";
             this.dgvDoanhThu.RowHeadersWidth = 51;
@@ -307,9 +308,10 @@
             this.lblSoVeBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoVeBan.Location = new System.Drawing.Point(0, 45);
             this.lblSoVeBan.Name = "lblSoVeBan";
-            this.lblSoVeBan.Size = new System.Drawing.Size(92, 32);
+            this.lblSoVeBan.Size = new System.Drawing.Size(149, 32);
             this.lblSoVeBan.TabIndex = 0;
-            this.lblSoVeBan.Text = "label1";
+            this.lblSoVeBan.Text = "Số vé bán:";
+            this.lblSoVeBan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel7
             // 
@@ -327,9 +329,9 @@
             this.lblTongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongDoanhThu.Location = new System.Drawing.Point(0, 45);
             this.lblTongDoanhThu.Name = "lblTongDoanhThu";
-            this.lblTongDoanhThu.Size = new System.Drawing.Size(92, 32);
+            this.lblTongDoanhThu.Size = new System.Drawing.Size(221, 32);
             this.lblTongDoanhThu.TabIndex = 0;
-            this.lblTongDoanhThu.Text = "label2";
+            this.lblTongDoanhThu.Text = "Tổng doanh thu:";
             // 
             // tableLayoutPanel4
             // 

@@ -185,6 +185,8 @@
             // 
             // txtMaPhong
             // 
+            this.txtMaPhong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaPhong.Location = new System.Drawing.Point(810, 289);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(286, 22);
@@ -192,6 +194,8 @@
             // 
             // txtTenPhong
             // 
+            this.txtTenPhong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenPhong.Location = new System.Drawing.Point(810, 358);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(286, 22);
@@ -199,6 +203,8 @@
             // 
             // numSLG
             // 
+            this.numSLG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.numSLG.Location = new System.Drawing.Point(819, 422);
             this.numSLG.Maximum = new decimal(new int[] {
             1000,
@@ -211,6 +217,8 @@
             // 
             // cmbLoaiPhong
             // 
+            this.cmbLoaiPhong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbLoaiPhong.FormattingEnabled = true;
             this.cmbLoaiPhong.Items.AddRange(new object[] {
             "Thuong",
@@ -224,6 +232,8 @@
             // 
             // cmbTrangThai
             // 
+            this.cmbTrangThai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTrangThai.FormattingEnabled = true;
             this.cmbTrangThai.Items.AddRange(new object[] {
             "Hoạt động",

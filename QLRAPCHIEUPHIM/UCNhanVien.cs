@@ -13,7 +13,6 @@ namespace QLRAPCHIEUPHIM
 {
 	public partial class UCNhanVien : UserControl
 	{
-		private string chuoiketnoi = @"Data Source=LAPTOPK1;Initial Catalog=BaiTapLon;Integrated Security=True";
 
 		public UCNhanVien()
 		{
@@ -26,7 +25,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void LoadData()
 		{
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -51,7 +50,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void btnThem_Click_1(object sender, EventArgs e)
 		{
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -79,7 +78,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void btnSua_Click_1(object sender, EventArgs e)
 		{
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -109,7 +108,7 @@ namespace QLRAPCHIEUPHIM
 		{
 			if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
 			{
-				using (SqlConnection con = new SqlConnection(chuoiketnoi))
+				using (SqlConnection con = new DataConnection().getConnect())
 				{
 					try
 					{
@@ -149,7 +148,7 @@ namespace QLRAPCHIEUPHIM
 				return;     // Thoát khỏi hàm, không tìm kiếm nữa
 			}
 
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -203,7 +202,7 @@ namespace QLRAPCHIEUPHIM
 				return;     // Thoát khỏi hàm, không tìm kiếm nữa
 			}
 
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -232,7 +231,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -260,7 +259,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void btnSua_Click(object sender, EventArgs e)
 		{
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -290,7 +289,7 @@ namespace QLRAPCHIEUPHIM
 		{
 			if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
 			{
-				using (SqlConnection con = new SqlConnection(chuoiketnoi))
+				using (SqlConnection con = new DataConnection().getConnect())
 				{
 					try
 					{

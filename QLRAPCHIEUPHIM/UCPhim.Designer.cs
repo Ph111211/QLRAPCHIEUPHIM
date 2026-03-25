@@ -78,7 +78,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.txtTheLoai);
             this.panel1.Controls.Add(this.numThoiLuong);
             this.panel1.Controls.Add(this.txtTenPhim);
@@ -173,7 +173,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.LightBlue;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.txtTimKiem);
             this.panel2.Controls.Add(this.lblTimKiem);
             this.panel2.Controls.Add(this.cmbGHT);
@@ -283,7 +283,7 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.LightBlue;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.tableLayoutPanel1.ColumnCount = 6;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -375,6 +375,8 @@
             // 
             // dgvPhim
             // 
+            this.dgvPhim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhim.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaPhim,
@@ -385,7 +387,6 @@
             this.DaoDien,
             this.NgonNgu,
             this.GioiHanTuoi});
-            this.dgvPhim.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhim.Location = new System.Drawing.Point(0, 0);
             this.dgvPhim.Name = "dgvPhim";
             this.dgvPhim.RowHeadersWidth = 51;

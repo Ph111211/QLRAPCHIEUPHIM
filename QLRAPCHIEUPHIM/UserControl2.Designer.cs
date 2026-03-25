@@ -89,6 +89,8 @@
             // 
             // dgvLichChieu
             // 
+            this.dgvLichChieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLichChieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLichChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLichChieu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -96,7 +98,6 @@
             this.TenPhim,
             this.TenPhong,
             this.ThoiGianBatDau});
-            this.dgvLichChieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLichChieu.Location = new System.Drawing.Point(0, 0);
             this.dgvLichChieu.Name = "dgvLichChieu";
             this.dgvLichChieu.RowHeadersWidth = 51;
@@ -131,7 +132,7 @@
             this.tbl3.Name = "tbl3";
             this.tbl3.RowCount = 1;
             this.tbl3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbl3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tbl3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 707F));
             this.tbl3.Size = new System.Drawing.Size(941, 707);
             this.tbl3.TabIndex = 5;
             // 

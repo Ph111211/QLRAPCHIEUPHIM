@@ -91,7 +91,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnThoat.BackColor = System.Drawing.Color.Crimson;
             this.btnThoat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnThoat.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::QLRAPCHIEUPHIM.Properties.Resources.turn_off;
@@ -106,7 +106,7 @@
             // 
             // btnDoanhThu
             // 
-            this.btnDoanhThu.BackColor = System.Drawing.Color.LightCoral;
+            this.btnDoanhThu.BackColor = System.Drawing.Color.LightGreen;
             this.btnDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDoanhThu.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoanhThu.Image = global::QLRAPCHIEUPHIM.Properties.Resources.money;
@@ -121,7 +121,7 @@
             // 
             // btnKhachHang
             // 
-            this.btnKhachHang.BackColor = System.Drawing.Color.Cyan;
+            this.btnKhachHang.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnKhachHang.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.Image = global::QLRAPCHIEUPHIM.Properties.Resources.rating;
@@ -136,7 +136,7 @@
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.BackColor = System.Drawing.Color.Red;
+            this.btnNhanVien.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNhanVien.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.Image = global::QLRAPCHIEUPHIM.Properties.Resources.man__1_;
@@ -151,7 +151,7 @@
             // 
             // btnDuLieu
             // 
-            this.btnDuLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDuLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDuLieu.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuLieu.Image = global::QLRAPCHIEUPHIM.Properties.Resources.file;
@@ -327,7 +327,7 @@
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelTop);
             this.Name = "FormQuanLy";
-            this.Text = "1410, 862";
+            this.Text = "Trang quản lý";
             this.Load += new System.EventHandler(this.FormQuanLy_Load);
             this.Resize += new System.EventHandler(this.FormQuanLy_Resize);
             this.panelTop.ResumeLayout(false);

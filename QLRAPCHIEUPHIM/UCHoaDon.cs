@@ -15,7 +15,6 @@ namespace QLRAPCHIEUPHIM
 {
 	public partial class UCHoaDon : UserControl
 	{
-		private string chuoiketnoi = @"Data Source=LAPTOPK1;Initial Catalog=BaiTapLon;Integrated Security=True";
 
 		public UCHoaDon()
 		{
@@ -57,7 +56,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void LoadData()
 		{
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -85,7 +84,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -148,7 +147,7 @@ namespace QLRAPCHIEUPHIM
 				{
 					string maHoaDon = dgvHoaDon.SelectedRows[0].Cells["MaHoaDon"].Value.ToString();
 
-					using (SqlConnection con = new SqlConnection(chuoiketnoi))
+					using (SqlConnection con = new DataConnection().getConnect())
 					{
 						try
 						{

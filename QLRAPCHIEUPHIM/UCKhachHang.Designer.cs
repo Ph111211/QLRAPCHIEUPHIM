@@ -318,6 +318,8 @@
             // 
             // dgvKH
             // 
+            this.dgvKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -328,7 +330,6 @@
             this.DiemTichLuy,
             this.NgaySinh,
             this.DaXoa});
-            this.dgvKH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKH.Location = new System.Drawing.Point(3, 379);
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.RowHeadersWidth = 51;
