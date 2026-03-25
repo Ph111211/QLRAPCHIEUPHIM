@@ -40,7 +40,7 @@ namespace QLRAPCHIEUPHIM
 				return;
 			}
 
-			using (conn)
+			using (SqlConnection conn = new DataConnection().getConnect())
 			{
 				conn.Open();
 

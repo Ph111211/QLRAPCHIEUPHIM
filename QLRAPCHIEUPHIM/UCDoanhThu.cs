@@ -16,8 +16,6 @@ namespace QLRAPCHIEUPHIM
 {
 	public partial class UCDoanhThu : UserControl
 	{
-		private string chuoiketnoi = @"Data Source=LAPTOPK1;Initial Catalog=BaiTapLon;Integrated Security=True";
-
 		public UCDoanhThu()
 		{
 			InitializeComponent();
@@ -80,7 +78,7 @@ namespace QLRAPCHIEUPHIM
 				parameters.Add(new SqlParameter("@MaPhim", cmbTenPhim.SelectedValue.ToString()));
 			}
 
-			using (SqlConnection conn = new SqlConnection(chuoiketnoi))
+			using (SqlConnection conn = new DataConnection().getConnect())
 			using (SqlCommand cmd = new SqlCommand(query, conn))
 			{
 				cmd.Parameters.AddRange(parameters.ToArray());
@@ -102,7 +100,7 @@ namespace QLRAPCHIEUPHIM
 		private void LoadDanhSachPhim()
 		{
 			string query = "SELECT MaPhim, TenPhim FROM Phim";
-			using (SqlConnection conn = new SqlConnection(chuoiketnoi))
+			using (SqlConnection conn = new DataConnection().getConnect())
 			using (SqlCommand cmd = new SqlCommand(query, conn))
 			{
 				conn.Open();

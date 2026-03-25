@@ -13,8 +13,6 @@ namespace QLRAPCHIEUPHIM
 {
 	public partial class UCKhachHang : UserControl
 	{
-		private string chuoiketnoi = @"Data Source=LAPTOPK1;Initial Catalog=BaiTapLon;Integrated Security=True";
-
 		public UCKhachHang()
 		{
 			InitializeComponent();
@@ -26,7 +24,7 @@ namespace QLRAPCHIEUPHIM
 
 		private void LoadData()
 		{
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -97,7 +95,7 @@ namespace QLRAPCHIEUPHIM
 		{
 			if (!CheckData()) return; // Nếu không hợp lệ thì dừng lại
 
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -129,7 +127,7 @@ namespace QLRAPCHIEUPHIM
 		{
 			if (!CheckData()) return;
 
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -179,7 +177,7 @@ namespace QLRAPCHIEUPHIM
 			if (result != DialogResult.Yes)
 				return;
 
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
@@ -216,7 +214,7 @@ namespace QLRAPCHIEUPHIM
 				return;     // Thoát khỏi hàm, không tìm kiếm nữa
 			}
 
-			using (SqlConnection con = new SqlConnection(chuoiketnoi))
+			using (SqlConnection con = new DataConnection().getConnect())
 			{
 				try
 				{
